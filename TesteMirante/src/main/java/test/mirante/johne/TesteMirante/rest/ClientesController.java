@@ -57,9 +57,7 @@ public class ClientesController {
 
 	@PutMapping
 	public ResponseEntity<String> atualizar(@RequestBody ClienteEntity cliente){
-        return new ResponseEntity<>("teste johne", HttpStatus.BAD_REQUEST);
-
-		//return clienteService.atualizar(cliente);
+		return clienteService.atualizar(cliente);
 	}
 
 	@DeleteMapping("{id}")
